@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+Records
+{% endblock %}
+{% block body_block %}
+{% if user.is_authenticated %}
+{% if instance %}
+<h2>List of records for {{ user }} :</h2>
+	<table>
+	    <tr>
+	    	<td><b>Url</b></td>
+	    	<td><b>Shrank url</b></td>
+	    	<td><b>Hits</b></td>
+	    </tr>
+		{% for url in instance %}
+		<tr>
+		<td><a href="{{ url.originalurl }}">{{ url.originalurl }}</a></td>
+		<td>{{ url.shorten }}</td>
+		<td>{{ url.clicks }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% else %}
+	<h3>You don't have any urls records</h3>
+{% endif %}
+{% endif %}
+{% endblock %}

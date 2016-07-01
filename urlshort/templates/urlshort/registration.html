@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+Register here !
+{% endblock %}
+{% block body_block %}
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12 col-md-7">
+<div class="panel panel-default">
+<div class="panel-body">
+<h3>Register here</h3>
+<form class="form-horizontal" method="POST" action="">{% csrf_token %}
+	{{ form.as_p }}
+	<input class="btn btn-primary btn-lg " type='submit' value ='register' />
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
