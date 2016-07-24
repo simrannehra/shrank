@@ -29,15 +29,15 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li ><a href="{% url 'urlshort:suceess' %}">Home</a><li>
         {% if user.is_authenticated %}
 		<li><a href="{% url 'urlshort:logout' %}">logout</a></li>
 		<li><a href="{% url 'urlshort:records' %}">records</a></li>
 		{% else %}
-		<li><a href="{% url 'urlshort:login' %}">login</a></li>
-		<li><a href="{% url 'urlshort:register' %}">register</a></li>
+		<li><a href="{% url 'urlshort:login' %}"><span class="glyphicon glyphicon-log-in"></span>login</a></li>
+		<li><a href="{% url 'urlshort:register' %}"><span class="glyphicon glyphicon-user"></span>register</a></li>
 
 		{% endif %}
       </ul>
@@ -60,7 +60,7 @@
       </div>
     </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
