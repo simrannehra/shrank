@@ -112,6 +112,7 @@ def create():
 
 
 def index2(request):
+	
 	user=request.user
 	form = addurl(request.POST or None)
 	form2=addurl(None)
