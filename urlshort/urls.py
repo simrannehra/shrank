@@ -12,3 +12,5 @@ urlpatterns = [
     url(r'^account/logout/$',views.user_logout,name='logout'),
     url(r'^account/records/$',views.record,name='records'),
 ]
+
+#the end
