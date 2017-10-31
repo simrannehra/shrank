@@ -8,4 +8,4 @@ class Sam(models.Model):
 	clicks = models.CharField(max_length=500,default=0)
 
 	def __str__(self):
-		return self.shorten 
+		return self.shorten +self.clicks
